@@ -26,3 +26,8 @@ def results():
     pred = model.predict([np.array(list(data.values()))])
     output = names[pred[0]]
     return jsonify(output)
+
+@app.route("/apinames", methods=["GET"])
+def getnames():
+    nameslist = names.tolist()
+    return jsonify(nameslist)

@@ -11,6 +11,7 @@ iris.keys()
 labels_names = iris.target_names
 pickle.dump(labels_names, open('names.pkl','wb'))
 nomesiris = pickle.load(open('names.pkl','rb'))
+print(nomesiris)
 
 
 x = iris.data
